@@ -1,12 +1,15 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
+import { HoroscopeProvider } from "./components/datas";
 
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <HoroscopeProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </HoroscopeProvider>
     </Router>
   )
 

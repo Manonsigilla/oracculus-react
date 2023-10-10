@@ -6,17 +6,7 @@ import { useState, useEffect } from "react";
 function Home(){
     const [horoscopeData, setHoroscopeData] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-
-    const handleArrowClick = (direction) => {
-        if (direction === 'left') {
-            if (currentIndex > 0) {
-                setCurrentIndex(currentIndex - 1);
-            }
-        } else if (direction === 'right' && currentIndex < horoscopeData.length - 1) {
-            setCurrentIndex(currentIndex + 1);
-        }
-    }
-
+    
     useEffect(() => {
         const fetchHoroscopeData = () => {
             fetch('../data/fichier.json')
@@ -27,6 +17,21 @@ function Home(){
         };
         fetchHoroscopeData();
     }, []);
+
+    const handleArrowClick = (direction) => {
+        if (direction === 'left') {
+            if (currentIndex > 0) {
+                setCurrentIndex(currentIndex - 1);
+            } else {
+                setCurrentIndex(horoscopeData.length - 1);
+            }
+        } else if (direction === 'right' && currentIndex < horoscopeData.length - 1) {
+            setCurrentIndex(currentIndex + 1);
+        } else {
+            setCurrentIndex(0);
+        }
+    }
+
 
     return (
         <div>

@@ -2,17 +2,25 @@ import { Link, NavLink } from "react-router-dom";
 import "../css/style.css"
 import logo from "../assets/images/logo-oraculus.png"
 import PropTypes from 'prop-types';
+import { useHoroscope } from "./datas";
 
-function Header ({ currentIndex, handleArrowClick, horoscopeData }) {
+function Header ({ horoscopeData }) {
+    // on utilise le hook useContext pour récupérer le contexte
+    const { currentIndex, handleArrowClick } = useHoroscope();
     const handleClickLeft = () => {
+        
         if (currentIndex > 0) {
             handleArrowClick('left');
+        } else {
+            handleArrowClick('left', true);
         }
     };
     
     const handleClickRight = () => {
         if (currentIndex < horoscopeData.length - 1) {
             handleArrowClick('right');
+        } else {
+            handleArrowClick('right', true);
         }
     };
     
@@ -35,8 +43,6 @@ function Header ({ currentIndex, handleArrowClick, horoscopeData }) {
     );
 }
 Header.propTypes = {
-    currentIndex: PropTypes.number.isRequired,
-    handleArrowClick: PropTypes.func.isRequired,
     horoscopeData: PropTypes.array.isRequired,
 }
 

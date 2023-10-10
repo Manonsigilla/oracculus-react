@@ -1,22 +1,22 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useHoroscope } from './datas';
 
 function Horoscope() {
-    const [horoscopeData, setHoroscopeData] = useState([]);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const { horoscopeData, currentIndex, setCurrentIndex, setHoroscopeData } = useHoroscope();
     
     useEffect(() => {
         const fetchHoroscopeData = () => {
             fetch('../data/fichier.json')
             .then(response => response.json())
             .then(data => {
-                setHoroscopeData(data)
+                setHoroscopeData(data);
+                setCurrentIndex(0);
             });
-            setCurrentIndex(0);
         };
 
         fetchHoroscopeData();
-    }, []);
+    }, [setHoroscopeData, setCurrentIndex]);
 
     const showHoroscope = () => {
         if (currentIndex >= 0 && currentIndex < horoscopeData.length) {
@@ -71,7 +71,6 @@ function Horoscope() {
         <aside>
             {horoscopeData.length > 0 && (
                 <img id="image" src={horoscopeData[currentIndex].Image} alt={horoscopeData[currentIndex].Signe} />
-
             )}
         </aside>
         </>
