@@ -1,0 +1,53 @@
+main {
+    margin-left: 360px;
+    display: flex;
+    justify-content: space-between;
+}
+.signes {
+    display: flex;
+    margin: 50px 0px 0px 100px;
+    gap: 30px;
+}
+.signes a {
+    border-top: 2px solid #BFBFBF;
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    text-transform: uppercase;
+    color: black;
+    font-size: 18px;
+}
+.signes a span {
+    color: #BFBFBF;
+    font-size: 16px;
+}
+.horoscope {
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+}
+.horoscope-description {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 25px 0px;
+}
+.horoscope-description span {
+    color: #3F3F3F;
+    font-size: 14px;
+}
+.horoscope-description p {
+    color: #908F8F;
+    font-size: 14px;
+}
+aside {
+    height: 100vh;
+    background-image: url(../Background-right.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    background-position-x: 90px;
+}

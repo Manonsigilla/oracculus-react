@@ -1,0 +1,38 @@
+[
+    {
+        "id" : 1,
+        "Signe" : "Bélier",
+        "Date" : "DU 21 MARS AU 19 AVRIL",
+        "Image" : "/images/Bélier.png",
+        "Amour" : "Aujourd'hui, votre charme naturel sera à son apogée. C'est le moment idéal pour renforcer les liens avec votre partenaire ou pour faire une nouvelle rencontre. Soyez ouvert à l'amour et à l'intimité.",
+        "Travail" : "Votre énergie et votre détermination au travail seront remarquées. Profitez de cette période pour avancer vers vos objectifs professionnels. Les opportunités de carrière pourraient se présenter, alors soyez prêt à les saisir.",
+        "Argent" : "Sur le plan financier, vous pourriez être tenté de faire des achats impulsifs. Gardez un œil sur votre budget et évitez les dépenses excessives. La prudence est de mise aujourd'hui.",
+        "Santé" : "Prenez soin de votre santé mentale. Prenez du temps pour vous détendre et méditer. La paix intérieure vous aidera à gérer le stress quotidien.",
+        "Famille" : "Votre cercle social sera une source de réconfort. Passez du temps avec vos proches et partagez des moments agréables ensemble.",
+        "Conseil" : "Soyez confiant et persévérant dans tout ce que vous entreprenez aujourd'hui. Votre attitude positive vous mènera loin."
+    },
+    {
+        "id" : 2,
+        "Signe" : "Cancer",
+        "Date" : "DU 21 JUIN AU 22 JUILLET",
+        "Image" : "/images/Cancer.png",
+        "Amour" : "Les relations amoureuses seront au centre de votre journée. Exprimez vos sentiments à votre partenaire et écoutez attentivement ce qu'il a à dire. La communication ouverte renforcera vos liens.",
+        "Travail" : "Au travail, votre créativité sera mise en valeur. C'est le moment idéal pour présenter de nouvelles idées ou projets. Votre énergie positive inspirera vos collègues.",
+        "Argent" : "Sur le plan financier, soyez prudent. Évitez les dépenses impulsives et gardez un œil sur vos finances. Planifiez judicieusement vos dépenses pour éviter les problèmes à l'avenir.",
+        "Santé" : "Prenez soin de votre bien-être physique et mental. Prenez le temps de vous détendre et de vous ressourcer. Une approche équilibrée de la santé est essentielle.",
+        "Famille" : "Votre famille et vos amis seront une source de joie et de soutien. Passez du temps de qualité avec eux et partagez des moments agréables.",
+        "Conseil" : "Soyez ouvert aux nouvelles expériences et aux opportunités qui se présentent à vous aujourd'hui. La vie est pleine de surprises, alors saisissez-les avec enthousiasme."
+    },
+    {
+        "id" : 3,
+        "Signe" : "Capricorne",
+        "Image" : "/images/Signe-capricorne.png",
+        "Date" : "DU 22 DECEMBRE AU 19 JANVIER",
+        "Amour" : "Votre relation amoureuse pourrait nécessiter plus d'attention aujourd'hui. Prenez le temps de communiquer avec votre partenaire et de résoudre tout problème qui pourrait surgir. L'écoute active est la clé.",
+        "Travail" : "Vous pourriez être confronté à des défis au travail, mais ne vous découragez pas. Votre détermination et votre sens de l'organisation vous aideront à surmonter les obstacles.",
+        "Argent" : "Sur le plan financier, la prudence est de mise. Évitez les dépenses inutiles et gardez un œil sur vos finances. C'est le moment idéal pour élaborer un plan financier à long terme.",
+        "Santé" : "Prenez soin de votre santé physique en faisant de l'exercice et en adoptant une alimentation équilibrée. Une bonne santé physique contribuera à votre bien-être général.",
+        "Famille" : "Votre famille et vos amis seront une source de soutien précieuse aujourd'hui. N'hésitez pas à demander de l'aide ou des conseils si vous en avez besoin.",
+        "Conseil" : "Restez concentré sur vos objectifs à long terme. La persévérance et la patience vous aideront à atteindre le succès."
+    }
+]
