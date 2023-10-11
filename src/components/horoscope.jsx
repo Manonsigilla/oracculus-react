@@ -59,8 +59,14 @@ function Horoscope() {
         <>
         <section>
             <div className="signes">
-                <Link to="#" className="prev-signe" onClick={() => changeTop('left')}>Sagittaire <span>22 NOV AU 21 DEC</span></Link>
-                <Link to="#" className="next-signe" onClick={() => changeTop('right')}>Cancer <span>22 NOV AU 21 DEC</span></Link>
+                <Link to="#" className="prev-signe" onClick={() => changeTop('left')}>
+                    {horoscopeData[currentIndex - 1 < 0 ? horoscopeData.length - 1 : currentIndex - 1].Signe}{" "}
+                    <span>{horoscopeData[currentIndex - 1 < 0 ? horoscopeData.length - 1 : currentIndex - 1].Date}</span>
+                </Link>
+                <Link to="#" className="next-signe" onClick={() => changeTop('right')}>
+                    {horoscopeData[currentIndex + 1 >= horoscopeData.length ? 0 : currentIndex + 1].Signe}{" "}
+                    <span>{horoscopeData[currentIndex + 1 >= horoscopeData.length ? 0 : currentIndex + 1].Date}</span>
+                </Link>
             </div>
 
             <article className="horoscope">
