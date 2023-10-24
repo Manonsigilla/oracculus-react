@@ -43,15 +43,9 @@ function Horoscope() {
 
     const changeTop = (direction) => {
         if (direction === 'left') {
-            if (currentIndex > 0) {
-                setCurrentIndex(currentIndex - 1);
-            } else {
-                setCurrentIndex(horoscopeData.length - 1);
-            }
-        } else if (direction === 'right' && currentIndex < horoscopeData.length - 1) {
-            setCurrentIndex(currentIndex + 1);
-        } else {
-            setCurrentIndex(0);
+            setCurrentIndex((currentIndex - 1 + horoscopeData.length) % horoscopeData.length);
+        } else if (direction === 'right') {
+            setCurrentIndex((currentIndex + 1) % horoscopeData.length);
         }
     };
 
@@ -60,12 +54,20 @@ function Horoscope() {
         <section>
             <div className="signes">
                 <Link to="#" className="prev-signe" onClick={() => changeTop('left')}>
-                    {horoscopeData[currentIndex - 1 < 0 ? horoscopeData.length - 1 : currentIndex - 1].Signe}{" "}
-                    <span>{horoscopeData[currentIndex - 1 < 0 ? horoscopeData.length - 1 : currentIndex - 1].Date}</span>
+                    {horoscopeData.length > 0 && (
+                        <>
+                            {horoscopeData[(currentIndex - 1 + horoscopeData.length) % horoscopeData.length].Signe}{" "}
+                            <span>{horoscopeData[(currentIndex - 1 + horoscopeData.length) % horoscopeData.length].Date}</span>
+                        </>
+                    )}
                 </Link>
                 <Link to="#" className="next-signe" onClick={() => changeTop('right')}>
-                    {horoscopeData[currentIndex + 1 >= horoscopeData.length ? 0 : currentIndex + 1].Signe}{" "}
-                    <span>{horoscopeData[currentIndex + 1 >= horoscopeData.length ? 0 : currentIndex + 1].Date}</span>
+                    {horoscopeData.length > 0 && (
+                        <>
+                            {horoscopeData[(currentIndex + 1) % horoscopeData.length].Signe}{" "}
+                            <span>{horoscopeData[(currentIndex + 1) % horoscopeData.length].Date}</span>
+                        </>
+    )}
                 </Link>
             </div>
 
